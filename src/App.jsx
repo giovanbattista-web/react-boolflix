@@ -1,17 +1,19 @@
 import { useState } from 'react';
 
 function App() {
+  const [title, setTitle] = useState("");
 
-  const [title, setTtitle] = useState("");
+  const handleSubmit = (e) => { e.preventDefault(); }
+
   return (
     <>
       <div className='container'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Movies</h1>
-          </div>
-        </div>
+        <h1>Film da cercare</h1>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}
+          placeholder='Inserisci il titolo del film' />
       </div>
+
+
     </>
   )
 };
