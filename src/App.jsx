@@ -11,6 +11,7 @@ function App() {
         <h1>Film da cercare</h1>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}
           placeholder='Inserisci il titolo del film' />
+        <button>Invia</button>
       </div>
 
 
