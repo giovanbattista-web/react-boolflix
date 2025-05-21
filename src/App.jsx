@@ -1,6 +1,7 @@
 import react from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Flag from 'react-world-flags';
 
 function App() {
   const [titolo, setTitolo] = useState('');
