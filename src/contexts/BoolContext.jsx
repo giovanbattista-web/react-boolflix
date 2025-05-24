@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { createContext } from "react";
+const BoolContext = createContext();
 
-const BoolContext = () => {
+const BoolProvider = ({ children }) => {
     return (
         <div>BoolContext</div>
     )
-}
+};
 
-export default BoolContext
+export default BoolContext;
