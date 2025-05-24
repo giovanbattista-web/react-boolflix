@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Flag from 'react-world-flags';
+import BoolContext from '../contexts/BoolContext';
 
 const Header = () => {
     const [titolo, setTitolo] = useState('');
