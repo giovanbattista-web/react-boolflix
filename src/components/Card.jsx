@@ -1,26 +1,39 @@
-const imgItaly = "public/it.png";
-const imgEnglish = "public/en.png";
-const imgNotFlag = "public/punto_interrogativo.jpg"
-
+import { useContext } from "react";
+import BoolContext from "../contexts/BoolContext";
 
 const Card = (props) => {
-    function getFlag(check) {
-        if (check === "it") {
-            return <img className="img-fluid" src={imgItaly} alt="" />
-        } else
-            if (check === "en") {
-                return <img className="img-fluid" src={imgEnglish} alt="" />
-            } else
-                return <img className="img-fluid" src={imgNotFlag} alt="" />
+    const { apiUrlBase } = useContext(BoolContext);
+    function getChoiceFlag(check) {
+        let language = ["it", "en"]
+        if (language.includes(check)) {
+            return <img src={`public/${check}.jpg`} />
+        } else {
+            return <img src={`placeholder`} />
+            return <img src={` public/ placeholder.png`} />
+        }
+    }
+
+    function choiceStars(vote_average) {
+        const stars = Math.ceil(vote_average / 2); // CONVERTO IL VOTO DA NUMERO A STELLE 
+        const fullStar = Array(stars).fill(<i className="fa-solid fa-star"></i>)
+        const emptyStar = Array(5 - stars).fill(<i className="fa-regular fa-star"></i>)
+        return [...fullStar, ...emptyStar]
     }
 
     return (
-        <ul className='card'>
-            <li> Titolo : {props.element.title || props.element.name}</li>
-            <li> Titolo originale : {props.element.original_title}</li>
-            <li> Lingua : {getFlag(props.element.original_language)}</li>
-            <li> Voto : {props.element.vote_average}</li>
-        </ul>
+        <>
+            <div className="card-header">
+                <img src={props.element.poster_path !== null ? `${apiUrlBase}w342${props.element.poster_path}` :
+                    `https://placehold.co/342x520`} />
+            </div>
+
+            <ul className='card-body'>
+                <li> Titolo : {props.element.title || props.element.name}</li>
+                <li> Titolo originale : {props.element.original_title}</li>
+                <li> Lingua : {getChoiceFlag(props.element.original_language)}</li>
+                <li> Voto : {choiceStars(props.element.vote_average)}</li>
+            </ul>
+        </>
     )
 };
 

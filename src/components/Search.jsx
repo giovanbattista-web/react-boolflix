@@ -3,12 +3,11 @@ import BoolContext from '../contexts/BoolContext';
 
 const Search = () => {
     const [search, setSearch] = useState("");
-    const { getMovies, getSeries } = useContext(BoolContext);
+    const { getBoth } = useContext(BoolContext);
 
     function handleClick(e) {
         e.preventDefault();
-        getMovies(search);
-        getSeries(search);
+        getBoth(search);
         setSearch("");
     }
 
