@@ -12,15 +12,6 @@ const Search = () => {
         setSearch("");
     }
 
-    function entersearch(e) {
-        if (e.key === "enter") {
-            e.preventDefault();
-            getMovies(search);
-            getSeries(search);
-            setSearch("");
-        }
-    };
-
     return (
         <>
             <div className='container'>
@@ -28,7 +19,7 @@ const Search = () => {
                 <input type="search" placeholder='Scrivi cosa vuoi cercare' value={search}
                     onChange={(e) => setSearch(e.target.value)} />
                 <input type="search" placeholder='Scrivi cosa vuoi cercare' value={search}
-                    onChange={(e) => setSearch(e.target.value)} entersearch={entersearch} />
+                    onChange={(e) => setSearch(e.target.value)} />
                 <button type='submit' onClick={handleClick}>invia</button>
             </div>
         </>

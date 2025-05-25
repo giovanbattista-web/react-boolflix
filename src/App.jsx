@@ -9,6 +9,8 @@ const apiTvSeries = "https://api.themoviedb.org/3/search/tv"
 
 const apiKey = "309ed232714c22027bdc63085a7e6a19"
 
+const apiPoster = "https://image.tmdb.org/t/p/"
+
 function App() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
