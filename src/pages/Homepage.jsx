@@ -9,9 +9,9 @@ const Homepage = () => {
             <div className="container">
                 <div className="row">
                     {
-                        movies.map((currentMovie) => (
-                            <div className="col">
-                                <Card key={currentMovie.id} movie={currentMovie} />
+                        movies.map((updatedMovie) => (
+                            <div className="col" key={updatedMovie.id}>
+                                <Card movie={updatedMovie} />
                             </div>
                         ))
                     }
