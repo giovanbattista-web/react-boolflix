@@ -6,15 +6,15 @@ const Card = (props) => {
     function getChoiceFlag(check) {
         let language = ["it", "en"]
         if (language.includes(check)) {
-            return <img src={`public/${check}.jpg`} />
+            return <img src={`public/${check}.png`} />
         } else {
-            return <img src={`placeholder`} />
-            return <img src={` public/ placeholder.png`} />
+            return <img src={`imgPlaceholder`} />
+            return <img src={` public/ placeholder.jpg`} />
         }
     }
 
     function choiceStars(vote_average) {
-        const stars = Math.ceil(vote_average / 2); // CONVERTO IL VOTO DA NUMERO A STELLE 
+        const stars = Math.ceil(vote_average / 2);
         const fullStar = Array(stars).fill(<i className="fa-solid fa-star"></i>)
         const emptyStar = Array(5 - stars).fill(<i className="fa-regular fa-star"></i>)
         return [...fullStar, ...emptyStar]
