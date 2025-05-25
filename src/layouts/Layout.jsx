@@ -1,8 +1,12 @@
-import React from 'react';
+import Homepage from '../pages/Homepage';
+import Search from '../components/Search';
 
 const Layout = () => {
     return (
-        <div>Layout</div>
+        <>
+            <Search />
+            <Homepage />
+        </>
     )
 };
 
