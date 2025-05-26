@@ -4,8 +4,15 @@ import Search from '../components/Search';
 const Layout = () => {
     return (
         <>
-            <Search />
-            <Homepage />
+            <header>
+                <div className='container header'>
+                    <h1 className='logo'>BOOLFLIX</h1>
+                    <Search />
+                </div>
+            </header>
+            <main>
+                <Homepage />
+            </main>
         </>
     )
 };

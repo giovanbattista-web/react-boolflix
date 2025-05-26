@@ -6,8 +6,9 @@ const Homepage = () => {
     const { movies, series } = useContext(BoolContext);
     return (
         <>
-            <div className="container">
-                <h1>Movies</h1>
+            <div className="container welcome">
+                <h1>Benvenuto</h1>
+                <p>Milioni di film, serie TV e persone da scoprire. Esplora ora.</p>
                 <div className="row">
                     {
                         movies.map((updatedElement) => (

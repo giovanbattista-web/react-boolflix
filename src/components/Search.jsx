@@ -15,11 +15,9 @@ const Search = () => {
         <>
             <div className='container'>
                 <label htmlFor="search"></label>
-                <input type="search" placeholder='Scrivi cosa vuoi cercare' value={search}
+                <input className='search' type="search" placeholder='Scrivi cosa vuoi cercare' value={search}
                     onChange={(e) => setSearch(e.target.value)} />
-                <input type="search" placeholder='Scrivi cosa vuoi cercare' value={search}
-                    onChange={(e) => setSearch(e.target.value)} />
-                <button type='submit' onClick={handleClick}>invia</button>
+                <button className='button' type='submit' onClick={handleClick}>Cerca</button>
             </div>
         </>
     )

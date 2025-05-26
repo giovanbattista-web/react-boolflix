@@ -22,17 +22,20 @@ const Card = (props) => {
 
     return (
         <>
-            <div className="card-header">
-                <img src={props.element.poster_path !== null ? `${apiUrlBase}w342${props.element.poster_path}` :
-                    `https://placehold.co/342x520`} />
-            </div>
+            <div className="card">
+                <div className="card-header">
+                    <img src={props.element.poster_path !== null ? `${apiUrlBase}w342${props.element.poster_path}` :
+                        `https://placehold.co/342x520`} />
+                </div>
 
-            <ul className='card-body'>
-                <li> Titolo : {props.element.title || props.element.name}</li>
-                <li> Titolo originale : {props.element.original_title}</li>
-                <li> Lingua : {getChoiceFlag(props.element.original_language)}</li>
-                <li> Voto : {choiceStars(props.element.vote_average)}</li>
-            </ul>
+                <ul className='card-body'>
+                    <li> Titolo : {props.element.title || props.element.name}</li>
+                    <li> Titolo originale : {props.element.original_title}</li>
+                    <li>Descrizione : {props.element.overview.slice(0, 150)}</li>
+                    <li> Lingua : {getChoiceFlag(props.element.original_language)}</li>
+                    <li> Voto : {choiceStars(props.element.vote_average)}</li>
+                </ul>
+            </div>
         </>
     )
 };
