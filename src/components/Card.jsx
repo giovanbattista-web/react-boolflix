@@ -31,7 +31,7 @@ const Card = (props) => {
                 <ul className='card-body'>
                     <li> Titolo : {props.element.title || props.element.name}</li>
                     <li> Titolo originale : {props.element.original_title}</li>
-                    <li>Descrizione : {props.element.overview.slice(0, 150)}</li>
+                    <li> Trama : {props.element.overview.slice(0, 150)}</li>
                     <li> Lingua : {getChoiceFlag(props.element.original_language)}</li>
                     <li> Voto : {choiceStars(props.element.vote_average)}</li>
                 </ul>
