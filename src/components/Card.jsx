@@ -9,7 +9,6 @@ const Card = (props) => {
             return <img src={`public/${check}.png`} />
         } else {
             return <img src={`imgPlaceholder`} />
-            return <img src={` public/ placeholder.jpg`} />
         }
     }
 
