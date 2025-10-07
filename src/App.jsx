@@ -1,5 +1,4 @@
-import BoolProvider from './contexts/BoolContext';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Layout from './layouts/Layout';
 import axios from 'axios';
 import BoolContext from './contexts/BoolContext';

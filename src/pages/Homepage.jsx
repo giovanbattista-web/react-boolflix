@@ -7,23 +7,23 @@ const Homepage = () => {
     return (
         <>
             <div className="container welcome">
-                <h1>Benvenuto</h1>
+                <h2>Benvenuto</h2>
                 <p>Milioni di film, serie TV e persone da scoprire. Esplora ora.</p>
                 <div className="row">
                     {
-                        movies.map((updatedElement) => (
-                            <div className="col" key={updatedElement.id}>
-                                <Card element={updatedElement} />
+                        movies.map(movie => (
+                            <div className="col" key={movie.id}>
+                                <Card element={movie} />
                             </div>
                         ))
                     }
                 </div>
-                <h1>Television Series</h1>
+                <h3>Television Series</h3>
                 <div className="row">
                     {
-                        series.map((updatedElement) => (
-                            <div className="col" key={updatedElement.id}>
-                                <Card element={updatedElement} />
+                        series.map(movie => (
+                            <div className="col" key={movie.id}>
+                                <Card element={movie} />
                             </div>
                         ))
                     }

@@ -4,31 +4,28 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
 main {
     height: 100%;
+    background-color: #141414ee;
+    color: white;
 }
+
+header {
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .container {
     width: 80%;
     margin: auto;
 }
 
-header {
-    background-color: black;
-}
-
 .logo {
     color: red;
-}
-
-main {
-    height: 100%;
-    background-color: #141414ee;
-    color: white;
 }
 
 .row {
@@ -55,18 +52,16 @@ main {
     padding: 3px 5px;
 }
 
-.header {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    max-width: 100%;
 }
 
 .card:hover {
